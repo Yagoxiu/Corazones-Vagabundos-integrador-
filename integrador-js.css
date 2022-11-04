@@ -1,0 +1,49 @@
+@media (max-width: 416px) {
+    button.navbar-toggler {
+        margin: 0 45px !important;
+    }
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #343A40 !important;
+}
+
+a.text-success.nav-link.active {
+    color: #97C93E !important;
+}
+
+/* Párrafos */
+section>div>p {
+    display: flex !important;
+    text-align: center !important;
+}
+
+/* Cards */
+.btn .badge {
+    color: white !important;
+}
+
+div.card-body.bg-primary {
+    background-color: #CCE5FF !important;
+}
+
+/* Buttons */
+.btn-success {
+    background-color: #97C93E;
+    border: #97C93E;
+}
+
+/* Footer  */
+ul.nav {
+    margin-top: 70px;
+}
+
+ul.nav.bg-dark {
+    background: rgb(31, 56, 68);
+    background: linear-gradient(90deg, rgba(31, 56, 68, 1) 0%, rgba(30, 81, 111, 1) 100%);
+}
