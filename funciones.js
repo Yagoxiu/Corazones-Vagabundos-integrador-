@@ -114,7 +114,7 @@ function donacionRealizada() {
         timerProgressBar: true
     })
     setTimeout(function(){
-        window.location.href = 'donacionRealizada.html';
+        window.location.href = 'donacion-realizada.html';
     }, 5000);
 }
 
