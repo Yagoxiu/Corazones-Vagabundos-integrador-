@@ -136,7 +136,7 @@ main {
     -o-transition: all .2s;
 }
 
-.bannerPrincipal button:hover {
+a.buttonHref:hover {
     background-color: white;
 }
 
