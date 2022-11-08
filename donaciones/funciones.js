@@ -56,7 +56,8 @@ function borrar(e) {
     formulario.apellido.value = ''
     formulario.email.value = ''
     formulario.seleccion.value = 'Categoría'
-    // formulario.cantidad.value = ''
+    formulario.cantidad.value = ''
+    toPay.textContent = ''
 
     for (let item of cuadros) {
         item.classList.replace('border-success', 'border-muted')
@@ -65,6 +66,24 @@ function borrar(e) {
 }
 
 function checkError() {
+
+    setTimeout(function(){
+        formulario.nombre.value === ''
+        formulario.nombre.classList.remove('border-danger')
+
+        formulario.apellido.value === ''
+        formulario.apellido.classList.remove('border-danger')
+
+        formulario.email.value === ''
+        formulario.email.classList.remove('border-danger')
+
+        formulario.cantidad.value === ''
+        formulario.cantidad.classList.remove('border-danger')
+
+        !valor3
+        formulario.opciones.classList.remove('border-danger')
+    }, 1000);
+
     let informacion = false;
     const valor3 =
         formulario.opciones.value === '1' && 'Premium' ||
@@ -83,9 +102,9 @@ function checkError() {
         ? formulario.email.classList.add('border-danger')
         : formulario.email.classList.remove('border-danger')
 
-    // formulario.cantidad.value === ''
-    //     ? formulario.cantidad.classList.add('border-danger')
-    //     : formulario.cantidad.classList.remove('border-danger')
+    formulario.cantidad.value === ''
+        ? formulario.cantidad.classList.add('border-danger')
+        : formulario.cantidad.classList.remove('border-danger')
     
     !valor3
         ? formulario.opciones.classList.add('border-danger')
@@ -96,8 +115,8 @@ function checkError() {
             nombre: formulario.nombre.value,
             apellido: formulario.apellido.value,
             email: formulario.email.value,
-            opcion: valor3
-            // cantidad: formulario.cantidad.value,
+            opcion: valor3,
+            total: toPay.textContent
         }
     }
     return informacion
@@ -108,13 +127,13 @@ function donacionRealizada() {
         position: 'center',
         icon: 'success',
         title: '¡Ha realizado su donación con éxito!',
-        text: 'Redirigiendolo...',
+        text: 'Redirigiendo...',
         showConfirmButton: false,
         timer: 5000,
         timerProgressBar: true
     })
     setTimeout(function(){
-        window.location.href = 'donacion-realizada.html';
+        window.location.href = './donacion-realizada/donacion-realizada.html';
     }, 5000);
 }
 
@@ -125,5 +144,46 @@ function enviar(e) {
     completeForm && donacionRealizada()
 }
 
+function summary(e) {
+    e.preventDefault();
+
+    let numberTickets = document.querySelector(".numberTickets");
+
+    if (Number(numberTickets.value)) {
+        let selectedCategory = document.querySelector(".selectedCategory");
+        let totalPayment
+        let sumTicked
+        let discount
+
+        switch (selectedCategory.value) {
+        case "1": {
+            let originalPrice = 20
+            sumTicked = originalPrice * numberTickets.value
+            discount = sumTicked * 0.8
+            totalPayment = sumTicked - discount
+            break;
+        }
+        case "2": {
+            let originalPrice = 10
+            sumTicked = originalPrice * numberTickets.value
+            discount = sumTicked * 0.5
+            totalPayment = sumTicked - discount
+            break;
+        }
+        case "3": {
+            let originalPrice = 5
+            sumTicked = originalPrice * numberTickets.value
+            discount = sumTicked * 0.1
+            totalPayment = sumTicked - discount
+            break;
+            }
+        }
+        toPay.textContent = `Total: ${totalPayment} $`;
+    } 
+
+    const completedForm = checkError();
+    }  
+
 boton1.onclick = (e) => { enviar(e) }
 boton2.onclick = (e) => { borrar(e) }
+boton3.onclick = (e) => { summary(e) }

@@ -13,11 +13,14 @@ const cuadros = document.getElementsByClassName('card');
 
 const boton1 = document.getElementById('boton1');
 const boton2 = document.getElementById('boton2');
+const boton3 = document.getElementById('boton3');
 
 // Select
 
 const select = document.querySelector('#seleccion');
+const cantidad = document.getElementById('cantidad')
 
-// Descuentos totales
+// Total discounts
 
-// const cantidad = document.getElementById('cantidad')
+const toPay = document.getElementById('total')
+
