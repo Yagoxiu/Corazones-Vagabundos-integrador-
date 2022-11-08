@@ -10,6 +10,6 @@ valor3.innerHTML = `<b>Categoría: </b>${form.opcion}`
 document.getElementById('total').innerHTML = `${form.total}`
 
 document.getElementById('donateAgain').innerText = ('Volver a donar')
-donateAgain.addEventListener('click', () => { location.href = '/donaciones/donaciones.html' })
+donateAgain.addEventListener('click', () => { location.href = './donacion-realizada.html' })
 document.getElementById('returnMainPage').innerText = ('Volver a la página principal')
-returnMainPage.addEventListener('click', () => { location.href = '/main-page.html' })
+returnMainPage.addEventListener('click', () => { location.href = 'index.html' })
