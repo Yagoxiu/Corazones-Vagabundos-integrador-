@@ -1,65 +1,65 @@
-// Cuadros //
+// frames
 
-function cuadroOver(cuadro) {
-    cuadro.classList.replace('border-muted', 'border-primary')
+function frameOver(frame) {
+    frame.classList.replace('border-muted', 'border-primary')
 }
 
-function cuadroLeave(cuadro) {
-    cuadro.classList.replace('border-primary', 'border-muted')
+function frameLeave(frame) {
+    frame.classList.replace('border-primary', 'border-muted')
 }
 
-function cuadroClick(cuadro) {
-    cuadro.ariaChecked = true
-    cuadro.classList.replace('border-primary', 'border-success')
-    cuadro.classList.replace('border-muted', 'border-success')
+function frameClick(frame) {
+    frame.ariaChecked = true
+    frame.classList.replace('border-primary', 'border-success')
+    frame.classList.replace('border-muted', 'border-success')
 
     select.value = 
-        cuadro.id === 'cuadro1' && '1' ||
-        cuadro.id === 'cuadro2' && '2' ||
-        cuadro.id === 'cuadro3' && '3'
+        frame.id === 'frame1' && '1' ||
+        frame.id === 'frame2' && '2' ||
+        frame.id === 'frame3' && '3'
 
-    for (let item of cuadros) {
-        if (item.id !== cuadro.id) {
+    for (let item of frames) {
+        if (item.id !== frame.id) {
             item.classList.replace('border-success', 'border-muted')
             item.ariaChecked = false
         }
     }
 }
 
-function asignarEventos(cuadro) {
-    cuadro.addEventListener('mouseover', () => cuadroOver(cuadro))
-    cuadro.addEventListener('mouseleave', () => cuadroLeave(cuadro))
-    cuadro.addEventListener('click', () => cuadroClick(cuadro))
+function assignEvents(frame) {
+    frame.addEventListener('mouseover', () => frameOver(frame))
+    frame.addEventListener('mouseleave', () => frameLeave(frame))
+    frame.addEventListener('click', () => frameClick(frame))
 }
 
-asignarEventos(cuadro1)
-asignarEventos(cuadro2)
-asignarEventos(cuadro3)
+assignEvents(frame1)
+assignEvents(frame2)
+assignEvents(frame3)
 
 
-// Opciones //
+// options
 
-function seleccionHecha() {
-    select.value === '1' && cuadroClick(cuadro1)
-    select.value === '2' && cuadroClick(cuadro2)
-    select.value === '3' && cuadroClick(cuadro3)
+function selection() {
+    select.value === '1' && frameClick(frame1)
+    select.value === '2' && frameClick(frame2)
+    select.value === '3' && frameClick(frame3)
 }
 
-select.addEventListener('change', seleccionHecha)
+select.addEventListener('change', selection)
 
 
-// Botones //
+// Botones
 
-function borrar(e) {
+function remove(e) {
     e.preventDefault();
-    formulario.nombre.value = ''
-    formulario.apellido.value = ''
-    formulario.email.value = ''
-    formulario.seleccion.value = 'Categoría'
-    formulario.cantidad.value = ''
+    form.name.value = ''
+    form.surname.value = ''
+    form.email.value = ''
+    form.select.value = 'Categoría'
+    form.amount.value = ''
     toPay.textContent = ''
 
-    for (let item of cuadros) {
+    for (let item of frames) {
         item.classList.replace('border-success', 'border-muted')
         item.ariaChecked = false
     }
@@ -68,61 +68,61 @@ function borrar(e) {
 function checkError() {
 
     setTimeout(function(){
-        formulario.nombre.value === ''
-        formulario.nombre.classList.remove('border-danger')
+        form.name.value === ''
+        form.name.classList.remove('border-danger')
 
-        formulario.apellido.value === ''
-        formulario.apellido.classList.remove('border-danger')
+        form.surname.value === ''
+        form.surname.classList.remove('border-danger')
 
-        formulario.email.value === ''
-        formulario.email.classList.remove('border-danger')
+        form.email.value === ''
+        form.email.classList.remove('border-danger')
 
-        formulario.cantidad.value === ''
-        formulario.cantidad.classList.remove('border-danger')
+        form.amount.value === ''
+        form.amount.classList.remove('border-danger')
 
-        !valor3
-        formulario.opciones.classList.remove('border-danger')
+        !categories
+        form.options.classList.remove('border-danger')
     }, 1000);
 
     let informacion = false;
-    const valor3 =
-        formulario.opciones.value === '1' && 'Premium' ||
-        formulario.opciones.value === '2' && 'Estándar' ||
-        formulario.opciones.value === '3' && 'Junior'
+    const categories =
+        form.options.value === '1' && 'Premium' ||
+        form.options.value === '2' && 'Estándar' ||
+        form.options.value === '3' && 'Junior'
 
-    formulario.nombre.value === ''
-        ? formulario.nombre.classList.add('border-danger')
-        : formulario.nombre.classList.remove('border-danger')
+    form.name.value === ''
+        ? form.name.classList.add('border-danger')
+        : form.name.classList.remove('border-danger')
 
-    formulario.apellido.value === ''
-        ? formulario.apellido.classList.add('border-danger')
-        : formulario.apellido.classList.remove('border-danger')
+    form.surname.value === ''
+        ? form.surname.classList.add('border-danger')
+        : form.surname.classList.remove('border-danger')
 
-    formulario.email.value === ''
-        ? formulario.email.classList.add('border-danger')
-        : formulario.email.classList.remove('border-danger')
+    form.email.value === ''
+        ? form.email.classList.add('border-danger')
+        : form.email.classList.remove('border-danger')
 
-    formulario.cantidad.value === ''
-        ? formulario.cantidad.classList.add('border-danger')
-        : formulario.cantidad.classList.remove('border-danger')
+    form.amount.value === ''
+        ? form.amount.classList.add('border-danger')
+        : form.amount.classList.remove('border-danger')
     
-    !valor3
-        ? formulario.opciones.classList.add('border-danger')
-        : formulario.opciones.classList.remove('border-danger')
+    !categories
+        ? form.options.classList.add('border-danger')
+        : form.options.classList.remove('border-danger')
 
-    if (valor3 && formulario.nombre.value && formulario.apellido.value) {
+    if (categories && form.name.value && form.surname.value) {
         informacion = {
-            nombre: formulario.nombre.value,
-            apellido: formulario.apellido.value,
-            email: formulario.email.value,
-            opcion: valor3,
+            name: form.name.value,
+            surname: form.surname.value,
+            email: form.email.value,
+            option: categories,
             total: toPay.textContent
         }
     }
     return informacion
 }
 
-function donacionRealizada() {
+function donationMade() {
     Swal.fire({
         position: 'center',
         icon: 'success',
@@ -137,11 +137,11 @@ function donacionRealizada() {
     }, 5000);
 }
 
-function enviar(e) {
+function send(e) {
     e.preventDefault()
     const completeForm = checkError()
-    completeForm && sessionStorage.setItem('formulario', JSON.stringify(completeForm))
-    completeForm && donacionRealizada()
+    completeForm && sessionStorage.setItem('form', JSON.stringify(completeForm))
+    completeForm && donationMade()
 }
 
 function summary(e) {
@@ -184,6 +184,6 @@ function summary(e) {
     const completedForm = checkError();
     }  
 
-boton1.onclick = (e) => { enviar(e) }
-boton2.onclick = (e) => { borrar(e) }
-boton3.onclick = (e) => { summary(e) }
+sendButton.onclick = (e) => { send(e) }
+deleteButton.onclick = (e) => { remove(e) }
+summaryButton.onclick = (e) => { summary(e) }

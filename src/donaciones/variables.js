@@ -1,26 +1,26 @@
 // Formulario
 
-const formulario = document.forms.formulario;
+const form = document.forms.form;
 
 // Cuadros
 
-const cuadro1 = document.getElementById('cuadro1');
-const cuadro2 = document.getElementById('cuadro2');
-const cuadro3 = document.getElementById('cuadro3');
-const cuadros = document.getElementsByClassName('card');
+const frame1 = document.getElementById('frame1');
+const frame2 = document.getElementById('frame2');
+const frame3 = document.getElementById('frame3');
+const frames = document.getElementsByClassName('card');
 
 // Botones
 
-const boton1 = document.getElementById('boton1');
-const boton2 = document.getElementById('boton2');
-const boton3 = document.getElementById('boton3');
+const sendButton = document.getElementById('sendButton');
+const deleteButton = document.getElementById('deleteButton');
+const summaryButton = document.getElementById('summaryButton');
 
 // Select
 
-const select = document.querySelector('#seleccion');
-const cantidad = document.getElementById('cantidad')
+const select = document.querySelector('#select');
+const amount = document.getElementById('amount');
 
 // Total discounts
 
-const toPay = document.getElementById('total')
+const toPay = document.getElementById('total');
 

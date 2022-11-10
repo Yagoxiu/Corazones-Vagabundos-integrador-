@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 @font-face {
     font-family: 'Black-Parade';
@@ -18,136 +19,76 @@
     src: url('./src/Comfortaa-Light.ttf')
 }
 
-* {
-    padding: 0;
-    margin: 0;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    background: rgb(224, 234, 235);
-    background: linear-gradient(90deg, rgba(224, 234, 235, 1) 30%, rgba(198, 228, 202, 1) 100%);
-    padding: 5px 20px;
-    align-items: center;
-}
-
-.logoTit {
-    width: 50%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.nombre {
-    width: 50%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    flex-direction: row;
-    margin: 0px 20px;
-    /* padding-right: 85vh; */
-}
-
-.titular {
-    font-family: 'Black-Parade', sans-serif;
-    font-size: 50px;
-}
-
-.subtitulo {
-    font-family: 'Amatic SC', cursive;
-    font-size: 30px;
-}
-
-header>nav>ul {
-    font-weight: bold;
-    display: flex;
-    list-style: none;
-    color: white;
-    font-size: 40px;
-    gap: 40px;
-    filter: drop-shadow(1px 1px 1px black);
-    padding-right: 50px;
-}
-
-header>nav>ul>li>a {
-    color: grey;
-    text-decoration: none;
-    transition: all .2s;
-    -webkit-transition: all .2s;
-    -moz-transition: all .2s;
-    -ms-transition: all .2s;
-    -o-transition: all .2s;
-    font-family: 'Amatic SC', sans-serif;
-}
-
-/* header>nav>ul>li:last-child a {
-    color: #FFF4B8;
-} */
-
-header>nav>ul>li>a:hover {
-    color: white;
-}
-
-main {
+body {
     background: rgb(224, 234, 235);
     background: linear-gradient(90deg, rgba(224, 234, 235, 1) 30%, rgba(198, 228, 202, 1) 100%);
 }
 
-.bannerPrincipal {
-    width: 100%;
-    flex-direction: column;
-    display: flex;
-    box-sizing: border-box;
-    background: url('./src/cat-gc43db2e86_1920.jpg'), #00000073;
-    height: 70vh;
-    color: white;
-    font-family: 'Montserrat';
-    font-size: large;
-    padding: 7%;
-    text-align: end;
-    justify-content: end;
-    align-items: end;
-    background-blend-mode: color;
-    background-position: center;
-    background-size: 100%;
+/* Navbar */
+
+nav.navbar {
+    background: rgb(224, 234, 235);
+    background: linear-gradient(90deg, rgba(224, 234, 235, 1) 30%, rgba(198, 228, 202, 1) 100%);
 }
 
-.buttonHref {
-    text-decoration: none;
-    font-size: 15px;
-    cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
-    width: fit-content;
-    padding: 8px 16px;
-    margin-top: 10px;
-    background-color: #CDCBD6;
+.container a {
     color: black;
-    border: 0px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+}
+
+a.nav-link {
     transition: all .2s;
-    -webkit-transition: all .2s;
-    -moz-transition: all .2s;
-    -ms-transition: all .2s;
-    -o-transition: all .2s;
 }
 
-a.buttonHref:hover {
-    background-color: white;
+a.nav-link:hover {
+    color: white;
 }
 
-/* Cards */
+/* Banner */
+
+.btn {
+    padding: 14px 26px;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn-danger {
+    background-color: #e34c43;
+    border-color: #e34c43;
+}
+
+.banner-image {
+    background: linear-gradient(rgba(79, 177, 140, 0.8), rgba(52, 48, 49, 0.8)), url(/src/cat-gc43db2e86_1920.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-phone-image img {
+    width: 300px;
+}
+
+.star-rating a {
+    color: rgba(255, 255, 255, 0.5);
+    margin-right: 10px;
+}
+
+.star-rating a:hover {
+    color: #fff;
+}
+
+.aa {
+    line-height: 26px;
+}
+
+/* Title Cards  */
 
 .titleCards {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
-    margin: 25px;
+    margin: 20px;
     text-transform: uppercase;
 }
 
@@ -157,266 +98,49 @@ a.buttonHref:hover {
     font-size: 1.5em;
 }
 
-.cards {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
+div.text1 {
+    text-align: center;
+    margin: 20px;
 }
+
+/* Cards */
 
 .card {
     cursor: pointer;
-    width: 25%;
     border: 1px solid rgba(0, 0, 0, 0.250);
 }
 
-.card .image {
+.imgA {
     height: 250px;
     background-size: cover;
     background-position-x: center;
 }
 
-.imgA {
-    background-image: url('https://www.humanesociety.org/sites/default/files/styles/1240x698/public/2022-06/web-hero-art-538611.jpg?h=88aed767&itok=qY6DKQLe');
-}
-
 .imgB {
-    background-image: url('https://www.clinicaveterinariathor.com/assets/img/8.jpg')
-}
-
-.imgC {
-    background-image: url('https://www.webconsultas.com/sites/default/files/styles/wc_adaptive_image__medium/public/media/2019/07/10/lavar_perro_0.jpg')
-}
-
-.subtitle {
-    display: flex;
-    gap: 8px;
-    margin: 3px 0px;
-}
-
-.subtitleA {
-    background-color: orange;
-    font-size: small;
-    font-weight: 900;
-    color: black;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-    padding: 3px 6px;
-}
-
-.subtitleB {
-    background-color: cadetblue;
-    font-size: small;
-    font-weight: 900;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-    padding: 3px 6px;
-}
-
-.texts {
-    margin: 0 15px;
-}
-
-.titles {
-    margin: 12px 0;
-}
-
-.title {
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.lorem {
-    font-family: 'Montserrat', sans-serif;
-    font-size: small;
-    margin-bottom: 10px;
-}
-
-/* Publicidad */
-
-.pub {
-    margin: 35px 0px;
-    display: flex;
-    height: 35vh;
-    gap: 2px;
-    color: white;
-    font-family: 'Montserrat';
-}
-
-.pub .image {
-    background-image: url('https://images2.alphacoders.com/125/1258471.jpg');
+    height: 250px;
     background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
+    background-position-x: center;
 }
 
-.pub .text {
-    background-color: #353A40;
-    padding: 15px;
-    width: 100%;
+.imgc {
+    height: 250px;
+    background-size: cover;
+    background-position-x: center;
 }
 
-.pub .text div:first-child {
-    font-weight: bold;
-    margin-bottom: 15px;
-    font-family: 'Bauer-Bodoni-Italic', sans-serif;
-    letter-spacing: 2px;
-    font-size: 20px;
-}
-
-.pub .text button {
-    margin: 15px 0px;
-    background: transparent;
-    border: 2px solid white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    transition: all .2s;
-    -webkit-transition: all .2s;
-    -moz-transition: all .2s;
-    -ms-transition: all .2s;
-    -o-transition: all .2s;
-    margin-right: 10px;
-}
-
-.pub .text button:hover {
-    background-color: black;
-}
-
-.buttonA {
-    margin-left: 0p;
-}
-
-.pub .text button a {
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    font-weight: bold;
-}
-
-.textA {
-    width: 80%;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 13px;
-    letter-spacing: 0px;
-}
-
-/* Formularios */
-
-.lowercase {
-    text-transform: none;
-}
+/* Forms */
 
 .lowercase a {
     color: black;
 }
 
-.formulario {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.start {
-    align-self: flex-start;
-    font-size: small;
-    margin-bottom: 15px;
-}
-
-form div {
-    width: 100%;
-    display: flex;
-    gap: 5px;
-}
-
-form {
-    padding: 15px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    font-family: 'Montserrat', sans-serif;
-}
-
-form>div>input {
-    box-sizing: border-box;
-    padding: 5px;
-    width: 100%;
-    font-family: 'Montserrat', sans-serif;
-    border: 2px solid lightgray;
-}
-
-form>textarea {
-    margin-top: 5px;
-    box-sizing: border-box;
-    padding: 5px;
-    width: 100%;
-    font-family: 'Montserrat', sans-serif;
-    border: 2px solid lightgray;
-}
-
-form>button {
-    padding: 10px 0;
-    width: 100%;
-    color: black;
-    background-color: #CDCBD6;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-    font-size: medium;
-    font-family: 'Montserrat', sans-serif;
-    cursor: pointer;
-    border: 0px;
-    transition: all .2s;
-    -webkit-transition: all .2s;
-    -moz-transition: all .2s;
-    -ms-transition: all .2s;
-    -o-transition: all .2s;
-}
-
-form>button:hover {
-    background-color: white;
-}
-
-.parrafoA {
-    width: 100%;
-    display: flex;
-    color: black;
-    font-size: 12px;
-    padding-bottom: 15px;
+p.opacity-50 {
+    font-size: 13px;
 }
 
 /* Footer */
 
-footer ul {
-    align-items: center;
-    padding: 20px;
-    display: flex;
-    justify-content: space-evenly;
-    background: rgb(47, 76, 144);
-    background: linear-gradient(90deg, rgba(47, 76, 144, 1) 30%, rgba(36, 39, 46, 1) 100%);
-    font-family: 'Amatic SC', sans-serif;
-    font-size: 20px;
-}
-
-footer ul li a {
+.footerText {
     transition: all .2s;
     -webkit-transition: all .2s;
     -moz-transition: all .2s;
@@ -424,17 +148,12 @@ footer ul li a {
     -o-transition: all .2s;
 }
 
-footer ul li a:hover {
-    color: white;
+.footerText:hover {
+    color: black !important;
 }
 
-footer ul li {
-    list-style-type: none;
-    width: 10%;
-    font-weight: bold;
-}
+/* Notice */
 
-footer a {
-    color: grey;
-    text-decoration: none;
+.notice2 {
+    background-color: #353A40;
 }

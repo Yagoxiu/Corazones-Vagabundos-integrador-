@@ -6,11 +6,13 @@
 
 body {
     min-height: 100vh;
+    background: rgb(224, 234, 235);
+    background: linear-gradient(90deg, rgba(224, 234, 235, 1) 30%, rgba(198, 228, 202, 1) 100%);
 }
 
 /* Navbar */
 .navbar {
-    background-color: #343A40 !important;
+    background-color: #5b9b8f !important;
 }
 
 a.text-success.nav-link.active {
@@ -44,6 +46,5 @@ ul.nav {
 }
 
 ul.nav.bg-dark {
-    background: rgb(31, 56, 68);
-    background: linear-gradient(90deg, rgba(31, 56, 68, 1) 0%, rgba(30, 81, 111, 1) 100%);
+    background-color: #5b9b8f !important;
 }

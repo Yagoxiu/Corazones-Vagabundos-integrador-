@@ -5,182 +5,223 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./src/logo-removebg-preview.png" type="image/x-icon">
     <title>Corazones Vagabundos</title>
+    <link rel="shortcut icon" href="./src/logo-removebg-preview.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- Navbar -->
     <header>
-        <div class="logoTit">
-            <div>
-                <img src="./src/logo.jpg" alt="Logo" width="100px">
-            </div>
-            <div class="nombre">
-                <p class="titular">Corazones Vagabundos</p>
-                <p class="subtitulo">Protectora de animales</p>
-            </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#seccion1">Inicio</a></li>
-                <li><a href="#seccion2">Servicios</a></li>
-                <li><a href="#seccion3">Quiénes somos</a></li>
-                <li><a href="#seccion4">Contacto</a></li>
-            </ul>
-        </nav>
+        <div id="seccion1">
+            <nav class="navbar navbar-expand-lg py-3 navbar-dark">
+                <div class="container"> <a class="fs-3 navbar-brand font-weight-bold nav-link disabled" href="/index.html">Corazones
+                        Vagabundos</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
+                            class="navbar-toggler-icon"></span> </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto font-weight-bold fs-5">
+                            <li class="nav-item"> <a class="nav-link" href="#seccion1">Inicio</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="#seccion2">Servicios</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="#seccion3">Quiénes somos</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="#seccion4">Contacto</a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
     </header>
 
     <main>
-        <section id="seccion1">
-            <div class="bannerPrincipal" id="seccion3">
-                <b>Corazones Vagabundos</b>
-                <p>es una organización no gubernamental sin fines de lucro con sede en San
-                    Antonio de Areco, provincia de Buenos Aires, Argentina. Se encarga del rescate, cuidado y protección
-                    de
-                    animales en situación de calle o cautiverio en la zona. Nuestro financiamiento se basa
-                    principalmente en
-                    donaciones de particulares, colectas independientes, sorteos y el propio aporte de los encargados
-                    del
-                    proyecto.</p>
-                <a button href="src/donaciones/donaciones.html" class="buttonHref">Donar</a>
-            </div>
-
-        </section>
-
-        <div class="titleCards">
-            <div id="seccion2">Conoce nuestros</div>
-            <div>Servicios</div>
-        </div>
-
-        <section class="cards">
-            <article class="card">
-                <div>
-                    <div class="image imgA"></div>
-                    <div>
-                        <div class="texts">
-                            <div class="titles">
-                                <div class="subtitle">
-                                    <span class="subtitleA">Bolt</span>
-                                    <span class="subtitleB">2 Años</span>
-                                </div>
-                                <div class="title">Rescate de animales</div>
-                            </div>
-                            <div class="lorem">En Corazones Vagabundos, nos encargamos del rescate y cuidado de animales
-                                en situación de calle, con especialistas entrenados en cada área para situaciones de
-                                riesgo que lo ameriten. Contamos con todas las herramientas técnicas y conocimiento
-                                previo para realizar un correcto rescate sin poner en riesgo la vida del animal.</div>
+        <!-- Banner -->
+        <section id="seccion3" class="banner-image">
+            <div class="container pb-5">
+                <div class="row py-5 align-items-center">
+                    <div class="col-lg-6">
+                        <h5 class="display-4 mb-4 font-weight-bold text-white">Corazones Vagabundos</h5>
+                        <div class="d-flex star-rating mb-5"> <a href=""><i class="lni lni-star-filled"></i></a> <a href=""><i
+                                    class="lni lni-star-filled"></i></a> <a href=""><i class="lni lni-star-filled"></i></a> <a href=""><i
+                                    class="lni lni-star"></i></a> <a href=""><i class="lni lni-star"></i></a> </div>
+                        <p class="h5 aa mb-4 pb-3 text-white-50">Es una organización no gubernamental sin fines de lucro con sede en San
+                            Antonio de Areco, provincia de Buenos Aires, Argentina. Se encarga del rescate, cuidado y protección
+                            de
+                            animales en situación de calle o cautiverio en la zona. Nuestro financiamiento se basa
+                            principalmente en
+                            donaciones de particulares, colectas independientes, sorteos y el propio aporte de los encargados
+                            del
+                            proyecto.</p>
+                        <div class="d-flex">
+                            <a href="/src/donaciones/donaciones.html" class="btn btn-lg btn-danger mr-2"><i class="lni lni-apple mr-2"></i>Donar</a>
                         </div>
                     </div>
-                </div>
-            </article>
-
-            <article class="card">
-                <div>
-                    <div class="image imgB"></div>
-                    <div>
-                        <div class="texts">
-                            <div class="titles">
-                                <div class="subtitle">
-                                    <span class="subtitleA">Felix</span>
-                                    <span class="subtitleB">1 Mes</span>
-                                </div>
-                                <div class="title">Servicio de veterinaria gratuito</div>
-                            </div>
-                            <div class="lorem">Contamos con un servicio de veterinaria totalmente gratuito solo para
-                                aquellos animales de compañía que carecen de propietario o poseedor, para familias que
-                                no posean los recursos necesarios para solventar los gastos de un veterinario particular
-                                o para casos de extrema emergencia que lo ameriten.</div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <article class="card">
-                <div>
-                    <div class="image imgC"></div>
-                    <div>
-                        <div class="texts">
-                            <div class="titles">
-                                <div class="subtitle">
-                                    <span class="subtitleA">Milu</span>
-                                    <span class="subtitleB">5 Años</span>
-                                </div>
-                                <div class="title">Cuidado personal e higiene</div>
-                            </div>
-                            <div class="lorem">Realizamos baños personales de perros y gatos, cortes de pelo y uñas.
-                                También realizamos operaciones de castración gratuita, aplicamos vacunas contra la
-                                rabia, antiparasitarios, etc.</div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        </section>
-
-        <aside>
-            <div class="pub">
-                <div class="image"></div>
-                <div class="text">
-                    <div>“Stray”: El videojuego que protagoniza un gato y recauda fondos para refugios</div>
-                    <div class="textA">El videojuego desarrollado por BlueTwelve Studio se lanzó el 19 de julio, y es
-                        una aventura que
-                        se ambienta en un mundo futurista similar al de la famosa película “Blade Runner”. Además de su
-                        jugabilidad y su tierno personaje principal, “Stray” también ha hecho noticia por apoyar a
-                        refugios e instituciones que rescatan gatitos callejeros.
-                        <br>
-                        <br>
-                        Ese es el caso de Nebraska Humane Society y Cats Protection, asociaciones que les brindan
-                        protección a animales. Annapurna Interactive, la empresa que se encarga de distribuir el juego,
-                        anunció que se alió con las instituciones para recaudación de fondos. Esto mediante sorteos de
-                        copias del juego para quienes donen desde 5 dólares a las organizaciones.</div>
-                    <div class="buttons">
-                        <button>
-                            <a href="https://store.steampowered.com/app/1332010/Stray/" target="_blank">Comprar</a>
-                        </button>
-                        <button>
-                            <a href="https://www.tarreo.com/noticias/688395/El-videojuego-Stray-recaudara-fondos-para-ayudar-a-gatitos-callejeros-que-necesiten-apoyo"
-                                target="_blank">Más Información</a>
-                        </button>
+                    <div class="col-lg-6 text-lg-right text-center mt-5 mt-lg-0">
+                        <div class="banner-phone-image"> <img src="/src/logo-removebg-preview.png"> </div>
                     </div>
                 </div>
             </div>
-        </aside>
+        </section>
 
+        <!-- Cards -->
+        <section id="seccion2">
+            <div class="titleCards">
+                <div id="seccion2">Conoce nuestros</div>
+                <div>Servicios</div>
+            </div>
+
+            <section class="cards">
+                <div class="row row-cols-1 row-cols-sm-4 g-0 d-flex justify-content-center gap-5 mx-5">
+                    <article class="card">
+                        <div class="col">
+                            <div class="">
+                                <img src="https://www.humanesociety.org/sites/default/files/styles/1240x698/public/2022-06/web-hero-art-538611.jpg?h=88aed767&itok=qY6DKQLe"
+                                    class="imgA card-img-top" alt="card-grid-image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rescate de animales</h5>
+                                    <p class="card-text">En Corazones Vagabundos, nos encargamos del rescate y cuidado de animales en situación de
+                                        calle, con especialistas entrenados en cada área para situaciones de riesgo que lo ameriten. Contamos con
+                                        todas las herramientas técnicas y conocimiento previo para realizar un correcto rescate sin poner en
+                                        riesgo la
+                                        vida del animal.</p>
+                                </div>
+                            </div>
+                    </article>
+                    <article class="card">
+                        <div class="col">
+                            <div class="">
+                                <img src="https://www.clinicaveterinariathor.com/assets/img/8.jpg" class="imgB card-img-top" alt="card-grid-image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Servicio de veterinaria gratuito</h5>
+                                    <p class="card-text">Contamos con un servicio de veterinaria totalmente gratuito solo para aquellos animales
+                                        de
+                                        compañía que carecen de propietario o poseedor, para familias que no posean los recursos necesarios para
+                                        solventar los gastos de un veterinario particular o para casos de extrema emergencia que lo ameriten.</p>
+                                </div>
+                            </div>
+                    </article>
+                    <article class="card">
+                        <div class="col">
+                            <div class="">
+                                <img src="https://www.webconsultas.com/sites/default/files/styles/wc_adaptive_image__medium/public/media/2019/07/10/lavar_perro_0.jpg"
+                                    class="imgC card-img-top" alt="card-grid-image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cuidado personal e higiene</h5>
+                                    <p class="card-text">Realizamos baños personales de perros y gatos, cortes de pelo y uñas. También realizamos
+                                        operaciones de castración gratuita, aplicamos vacunas contra la rabia, antiparasitarios, etc.</p>
+                                </div>
+                            </div>
+                    </article>
+                </div>
+            </section>
+        </section>
+
+        <!-- Notice -->
+        <section class="mt-5">
+            <div class="notice card">
+                <div class="row g-0">
+                    <div class="col-5 col-sm-4 w-50">
+                        <img src="https://images2.alphacoders.com/125/1258471.jpg" class="imgNoti img-fluid w-100 h-100" alt="card-horizontal-image">
+                    </div>
+                    <div class="notice2 col-7 col-sm-8 w-50">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">“Stray”: El videojuego que protagoniza un gato y recauda fondos para refugios</h5>
+                            <p class="card-text text-white">El videojuego desarrollado por BlueTwelve Studio se lanzó el 19 de julio, y es una
+                                aventura que se ambienta en un mundo futurista similar al de la famosa película “Blade Runner”. Además de su
+                                jugabilidad y su tierno personaje principal, “Stray” también ha hecho noticia por apoyar a refugios e instituciones
+                                que rescatan gatitos callejeros.
+                            </p>
+                            <p class="card-text text-white"> Ese es el caso de Nebraska Humane Society y Cats Protection, asociaciones que les brindan
+                                protección a animales.
+                                Annapurna Interactive, la empresa que se encarga de distribuir el juego, anunció que se alió con las instituciones
+                                para recaudación de fondos. Esto mediante sorteos de copias del juego para quienes donen desde 5 dólares a las
+                                organizaciones.</p>
+                            <div class="d-flex gap-3">
+                                <a button target="_blank" type="button" class="btn btn-outline-secondary"
+                                    href="https://store.steampowered.com/app/1332010/Stray/">Comprar</a>
+                                <a button target="_blank" type="button" class="btn btn-outline-secondary"
+                                    href="https://www.tarreo.com/noticias/688395/El-videojuego-Stray-recaudara-fondos-para-ayudar-a-gatitos-callejeros-que-necesiten-apoyo">Más
+                                    información</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Forms -->
         <div class="titleCards">
             <div id="seccion4">Formulario para</div>
             <div>voluntarios</div>
         </div>
 
-        <div class="titleCards lowercase">
-            <p class="anotate">Ser voluntario es dar toda nuestra fortaleza, ánimo, voluntad; pero más que eso, es <a href="">un estilo de vida</a>.
-                ¡Cuéntanos tus capacidades y objetivos!</p>
+        <div class="text1 px-5 d-flex justify-content-center">
+            <p>Ser voluntario es dar toda nuestra fortaleza, ánimo, voluntad; pero más
+                que eso, es un
+                estilo de vida. ¡Cuéntanos tus capacidades y objetivos!</p>
         </div>
 
-        <section class="formulario">
-            <form action="">
-                <div>
-                    <input type="text" placeholder="Nombre">
-                    <input type="text" placeholder="Apellido">
+        <aside class="d-flex justify-content-center">
+            <div class="w-50">
+                <div class="d-flex gap-2">
+                    <input type="text" class="form-control" placeholder="Nombre">
+                    <input type="text" class="form-control" placeholder="Apellido">
                 </div>
-                <textarea name="" id="" cols="30" rows="5" placeholder="Cuéntanos sobre ti"></textarea>
-                <p class="parrafoA">(Se recomienda dar la mayor cantidad de datos posibles con claridad para legibilidad
-                    del lector)</p>
-                <button>Enviar</button>
-            </form>
-        </section>
-
+                <div class="mt-2 d-flex flex-column form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" style="height: 100px"></textarea>
+                    <label class="opacity-50" for="floatingTextarea">Cuéntanos sobre ti</label>
+                    <p class="opacity-50">(Se recomienda dar la mayor cantidad de datos posibles con claridad para legibilidad
+                        del lector)</p>
+                    <button type="button" class="btn btn-secondary">Enviar</button>
+                </div>
+            </div>
+        </aside>
     </main>
 
-    <footer>
-        <ul>
-            <li><a href>Preguntas frecuentes</a></li>
-            <li><a href>Contáctenos</a></li>
-            <li><a href>Términos y condiciones</a></li>
-            <li><a href>Privacidad</a></li>
-        </ul>
+    <!-- Footer -->
+    <footer id=seccion4 class="mt-5">
+        <div>
+            <footer class="text-center text-white" style="background-color: #5b9b8f">
+                <div class="">
+                    <section class="mt-5">
+                        <div class="row text-center d-flex justify-content-center pt-3 mx-0">
+                            <div class="col-md-2">
+                                <h6 class="text-uppercase font-weight-bold">
+                                    <a href="#!" class="footerText text-decoration-none text-white">Preguntas frecuentes</a>
+                                </h6>
+                            </div>
+                            <div class="col-md-2">
+                                <h6 class="text-uppercase font-weight-bold">
+                                    <a href="#!" class="footerText text-decoration-none text-white">Contáctenos</a>
+                                </h6>
+                            </div>
+                            <div class="col-md-2">
+                                <h6 class="text-uppercase font-weight-bold">
+                                    <a href="#!" class="footerText text-decoration-none text-white">Términos y condiciones</a>
+                                </h6>
+                            </div>
+                            <div class="col-md-2">
+                                <h6 class="text-uppercase font-weight-bold">
+                                    <a href="#!" class="footerText text-decoration-none text-white">Privacidad</a>
+                                </h6>
+                            </div>
+                        </div>
+                </div>
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                    © 2022 Copyright:
+                    <a class="text-decoration-none text-white">Rodrigo Yago Paez</a>
+                </div>
+            </footer>
+        </div>
     </footer>
-
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
 </html>
