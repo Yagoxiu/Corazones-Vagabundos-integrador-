@@ -59,7 +59,7 @@ a.nav-link:hover {
 }
 
 .banner-image {
-    background: linear-gradient(rgba(79, 177, 140, 0.8), rgba(52, 48, 49, 0.8)), url(/src/cat-gc43db2e86_1920.jpg);
+    background: linear-gradient(rgba(79, 177, 140, 0.8), rgba(52, 48, 49, 0.8)), url(src/cat-gc43db2e86_1920.jpg);
     background-size: cover;
     background-position: center;
 }
