@@ -14,9 +14,9 @@ function frameClick(frame) {
     frame.classList.replace('border-muted', 'border-success')
 
     select.value = 
-        frame.id === 'frame1' && '1' ||
-        frame.id === 'frame2' && '2' ||
-        frame.id === 'frame3' && '3'
+        frame.id === 'frame1' && 'premium' ||
+        frame.id === 'frame2' && 'standard' ||
+        frame.id === 'frame3' && 'junior'
 
     for (let item of frames) {
         if (item.id !== frame.id) {
@@ -40,9 +40,9 @@ assignEvents(frame3)
 // options
 
 function selection() {
-    select.value === '1' && frameClick(frame1)
-    select.value === '2' && frameClick(frame2)
-    select.value === '3' && frameClick(frame3)
+    select.value === 'premium' && frameClick(frame1)
+    select.value === 'standard' && frameClick(frame2)
+    select.value === 'junior' && frameClick(frame3)
 }
 
 select.addEventListener('change', selection)
@@ -86,9 +86,9 @@ function checkError() {
 
     let informacion = false;
     const categories =
-        form.options.value === '1' && 'Premium' ||
-        form.options.value === '2' && 'Estándar' ||
-        form.options.value === '3' && 'Junior'
+        form.options.value === 'premium' && 'Premium' ||
+        form.options.value === 'standard' && 'Estándar' ||
+        form.options.value === 'junior' && 'Junior'
 
     form.name.value === ''
         ? form.name.classList.add('border-danger')
@@ -156,22 +156,22 @@ function summary(e) {
         let discount
 
         switch (selectedCategory.value) {
-        case "1": {
-            let originalPrice = 20
+        case "premium": {
+            let originalPrice = 50
             sumTicked = originalPrice * numberTickets.value
-            discount = sumTicked * 0.8
+            discount = sumTicked * 0.7
             totalPayment = sumTicked - discount
             break;
         }
-        case "2": {
-            let originalPrice = 10
+        case "standard": {
+            let originalPrice = 25
             sumTicked = originalPrice * numberTickets.value
             discount = sumTicked * 0.5
             totalPayment = sumTicked - discount
             break;
         }
-        case "3": {
-            let originalPrice = 5
+        case "junior": {
+            let originalPrice = 10
             sumTicked = originalPrice * numberTickets.value
             discount = sumTicked * 0.1
             totalPayment = sumTicked - discount

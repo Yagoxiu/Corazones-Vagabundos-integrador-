@@ -16,18 +16,18 @@
         <!-- Navbar -->
         <nav class="p-2 navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="text-light container-fluid">
-                <a class="mx-5 navbar-brand" href="#">Corazones Vagabundos</a>
+                <a class="mx-5 navbar-brand fs-3" href="/index.html">Corazones Vagabundos</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="mx-5 justify-content-end collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="opacity-50 nav-link active" aria-current="page" href="#">La conferencia</a>
-                        <a class="opacity-50 nav-link active" href="#">Los oradores</a>
-                        <a class="opacity-50 nav-link active" href="#">El lugar y la fecha</a>
-                        <a class="nav-link active" href="#">Conviértete en orador</a>
-                        <a class="text-success nav-link active" href="#">Comprar tickets</a>
+                    <div class="gap-2 fs-5 navbar-nav">
+                        <a class="nav-link" aria-current="page" href="#">La conferencia</a>
+                        <a class="nav-link" href="#">Los colaboradores</a>
+                        <a class="nav-link" href="#">El lugar y la fecha</a>
+                        <a class="nav-link" href="#">Conviértete en colaborador</a>
+                        <a class="buyTickets nav-link" href="#">Comprar entradas</a>
                     </div>
                 </div>
         </nav>
@@ -41,11 +41,11 @@
                     <div class="card-body">
                         <h5 class="card-title">Donante Premium</h5>
                         <p id="descuento80" class="card-text">
-                            Tienen un 80% de descuento en su primer donación
+                            Tienen un 70% de descuento en su primer donación
                         </p>
                     </div>
                     <div class="card-footer">
-                        <small id="precioPremium" class="fs-5 badge text-bg-secondary">20$</small>
+                        <small id="precioPremium" class="fs-5 badge text-bg-secondary">50$</small>
                     </div>
                 </div>
 
@@ -57,7 +57,7 @@
                         </p>
                     </div>
                     <div class="card-footer">
-                        <small id="precioEstandar" class="fs-5 badge text-bg-secondary">10$</small>
+                        <small id="precioEstandar" class="fs-5 badge text-bg-secondary">25$</small>
                     </div>
                 </div>
 
@@ -69,7 +69,7 @@
                         </p>
                     </div>
                     <div class="card-footer">
-                        <small id="precioJunior" class="fs-5 badge text-bg-secondary">5$</small>
+                        <small id="precioJunior" class="fs-5 badge text-bg-secondary">10$</small>
                     </div>
                 </div>
             </div>
@@ -113,9 +113,9 @@
                         <label form="formControlInput" class="form-label">ㅤ</label>
                         <select id="select" name="options" class="selectedCategory form-select" aria-label="Default select">
                             <option selected="">Categoría</option>
-                            <option value="1">Premium</option>
-                            <option value="2">Estándar</option>
-                            <option value="3">Junior</option>
+                            <option value="premium">Premium</option>
+                            <option value="standard">Estándar</option>
+                            <option value="junior">Junior</option>
                         </select>
                     </div>
                 </div>
